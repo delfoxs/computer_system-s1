@@ -1,16 +1,11 @@
-README.template
-
 ## Project Number/Title 
 
-* Authors: Your Name, and your group members’ names
-* Group name: Your Group Name
+* Authors: Hao Chen, Keyan Song, Lifeng Sun
+* Group name: Assignment 3 Groups 40
 
 ## Overview
 
-Concisely explain what the program does. If this exceeds a couple of
-sentences, you're going too far. Generally, you should be pulling this
-right from the project specification. We don't want you to just cut and
-paste, but paraphrase what is stated in the project specification.
+This program use parallel mergesort with POSIX threads to sort an array. It split the array recursively, sorts halves in parallel up to user define depth ("cutoff"), merge result, report the runtime and verifies the output is non-decreasing.
 
 ## Manifest
 
@@ -52,8 +47,9 @@ Example:
 
 ## Features and usage
 
-Summarise the main features of your program. It is also appropriate to
-instruct the user how to use your program.
+- Parallel depth control: Choose how many recursion levels spawn threads; beyond that, it falls back to a single-threaded mergesort.
+- Deterministic input generation: Creates a random integer array from a given seed for reproducible tests.
+- Timing & correctness check: Measures wall-clock sorting time and validates the result is sorted.
 
 ## Testing
 
